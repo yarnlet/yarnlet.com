@@ -1,41 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Specify website metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yarnlet's Socials</title>
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="assets/img/favicon.png">
 
     <!-- Import CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="assets/css/style.css">
+    
     <!-- Import Google Font "Rubik" CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    
+    <!-- Create the main block style -->
     <style>
-        .rubik {
-            font-family: 'Rubik', sans-serif;
-        }
-
-        .header {
-            margin-top: 350px;
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 5px;
-        }
-
         .main {
-            background-color: #000;
-            color: #fff;
+            display: block;
+            background-color: #000000;
+            color: #ffffff;
             text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 22%;
+            font-size: 0px;
+        }
+    </style>
+
+    <!-- Import social icon CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa {
+            padding: 14px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: 0.7s;
+        }
+
+        .fa:hover {
+            color: magenta;
         }
     </style>
 </head>
 <body class="main">
-    <div class="header">
-        <h1 class="rubik">Portfolio Coming Soon!</h1>
-    </div>
-    <p class="rubik">Hello, I'm yarnlet. This site is currently being developed! Check back later!</p>
+    <a href="https://github.com/yarnlet" title="GitHub" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
+    <a href="https://twitter.com/yarnlet" title="Twitter / 𝕏" target="_blank" rel="noopener noreferrer" class="fa fa-twitter"></a>
+    <a href="https://youtube.com/@yarnlet" title="YouTube" target="_blank" rel="noopener noreferrer" class="fa fa-youtube"></a>
+    <a href="https://www.linkedin.com/in/yarnlet" title="Linkedin" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
+    <a href="https://instagram.com/yarnlet" title="Instagram" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a>
 </body>
+<audio id="whooshAudio">
+    <source src="assets/audio/whoosh.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+<script>
+    // whoosh sound on clicking a social icon
+    document.addEventListener("DOMContentLoaded", function() {
+      var whooshAudio = document.getElementById("whooshAudio");
+      var faIcons = document.querySelectorAll(".main .fa");
+  
+      faIcons.forEach(function(icon) {
+        icon.addEventListener("click", function() {
+          whooshAudio.play();
+        });
+      });
+    });
+</script>
 </html>

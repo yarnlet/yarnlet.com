@@ -1,0 +1,23 @@
+.main {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    font-size: 0px;
+}
+
+.fa {
+    padding: 14px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.fa:hover {
+    color: magenta;
+}

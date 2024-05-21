@@ -1,0 +1,37 @@
+<!--
+    This page is simply a test page! I'm learning JavaScript!
+-->
+
+<!DOCTYPE html>
+<head>
+    <title>Adventure (1980)</title>
+</head>
+<body>
+    <style>
+        .disallowed_box {
+            width: 100%;
+            height: 900px;
+            margin: 0%;
+            padding: 0%;
+            background-color: black;
+        }
+
+        body {
+            background-color: black;
+        }
+    </style>
+    <div class="disallowed_box">
+        <a style="color: aliceblue; font-size: large;" id="res">Your resolution is too low!</a>
+    </div>
+    <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+
+        if (w < 1920) {
+            document.getElementById("res").innerHTML = "Your window's resolution of " + w + "x" + h + " is too low, please use at least width of 1920 and height of 900 pixels.";
+        } else {
+            document.getElementById("res").innerHTML = "Your window's resolution of " + w + "x" + h + " is adequate! Running the game!";
+        }
+        
+    </script>
+</body>
